@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ByggBoom</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header>
+        <nav class="navBar">
+            <img class="logo" src="logoByggBoom.jpg" alt="ett tak med">
+
+            <ul class="navMenu">
+                <li class="navItem">
+                    <a href="#footer" class="navLink">Kontakta oss</a>
+                </li>
+                <li class="navItem">
+                    <a href="#workers" class="navLink">Om oss</a>
+                </li>
+                <li class="navItem">
+                    <a href="#tidigareArbeten" class="navLink">Tidigare arbeten</a>
+                </li>
+            </ul> 
+
+            
+            <div class="hamburger">
+                <span class="bar">
+
+                </span>
+                <span class="bar">
+
+                </span>
+                <span class="bar">
+
+                </span>
+            </div>
+            
+        </nav>
+    </header>
+    
+    <div class="backgroundimg">
+       <!-- Detta är den stora bakgrundsbilden på framsidan av webbsidan när man öppnar den, denna finns i CSS koden--> 
+        <div class="OffertImgButton">
+            <h1><a href="#footer">Gratis offert!</a></h1>
+        </div>  
+    </div>
+
+    <div class="workersParent" id="workers">
+        <article class="workersChild">
+            <img src="erikas.png" alt="en tonårig kille">
+            <h2>VD</h2>
+            <h3>Erikas Rodovicius</h3><!--varje child står för varje ruta där egenskaper om varje arbetare står samt bilder och position inom företaget-->
+            <p>Erikas är grundaren och VD bakom ByggBoom och har varit det sedan företaget skapades år 2015. Ända sedan dess har han arbetat med ByggBoom inom byggbranschen och har mycket erfarenhet inom alla möjliga aspekter i ditt framtída hembygge.</p>
+        </article>
+        <article class="workersChild">
+            <img src="noahtangman.png" alt="en tonårig kille">
+            <h2>Takläggare</h2>
+            <h3>Noah Tängman</h3>
+            <p>Noah Tängman har varit en takläggare hos ByggBoom i ett flertal år och har innan ByggBoom mycket tidigare erfarenhet ho. Hans erfarenhet inom takbyten och tak är något som är svårt att hitta på marknaden och är något du borde söka efter när du ska göra ditt takbyte.</p>
+        </article>
+        <article class="workersChild">
+            <img src="jorre.png" alt="en tonårig kille">
+            <h2>Kakelsättare</h2>
+            <h3>Joel Alvebjörk</h3>
+            <p>Joel är vår minst erfarna arbetare då han är vår senaste anställning, men låt inte det ändra din åsikt om honom. Han har länge arbetat inom branschen med specialisering inom våtrum, vilket gör Joel Alvebjörk ett bra alternativ för dig som vill bygga om ditt badrum.</p>
+        </article>
+        <article class="workersChild">
+            <img src="malteviklund.png" alt="en tonårig kille med keps">
+            <h2>Takläggare</h2>
+            <h3>Malte Viklund</h3>
+            <p>Malte är en av våra två takläggare på ByggBoom. Han med den andra takläggaren har länge arbetat tillsammans och lärt sig exakt vad som passar bäst för olika miljöer och villkor, vilket gör Malte Viklund ett extremt bra val om du ska göra ditt takbyte i snaraste framtid.</p>
+
+            <h1 id="tidigareArbeten">hej</h1> <!--denna h1 är viktig för menyn att hamna på rätt ställe, lite fult men de funkar^^-->
+        </article>
+    </div>
+
+    
+
+    <section class="wrapperParent" id="earlierWork"> <!-- behövs flex för att separera dessa två olika delar, alltså en del där det är text och den andra där jag gör grid area med bilder-->
+        <section class="sectionWrap"> <!--detta är för att kunna ändra flex direction till column och få button under texten.-->
+            <article class="companyText" >
+                <h3>Kvalitékontroll hos oss</h3>
+                <p>Hos ByggBoom kan du gott försäkra dig att ditt bygge och dina drömmar kommer till liv. 
+                Vi gör allt som är möjligt för att se till att dina krav möts och  att du blir nöjd. 
+                Vi har erfarna arbetare som sedan länge har arbetat inom byggbranschen och ByggBoom, 
+                dessutom har vi länge haft våtrumscertifikat och har länge arbetat med att jobba utifrån dig som kunds behov. 
+                Om du letar efter ett kompetent byggföretag som kan skapa det drömhus eller drömrenovering som du länge velat göra, är ByggBoom en bra plats att starta på.
+                <span id="dots">..... </span>
+                <div id="moreText">
+                    <p>
+                        Genom bra kommunikation mellan dig och våra arbetare, ser vi till att dina drömmar förverkligas och kan skapa enkla lösningar för komplicerade problem. Även om du är 
+                        en returnerande kund eller en ny kund, behandlar vi dig på samma sätt oavsett vad.
+                    </p>
+                </div>
+            </article>
+        
+
+        <button onclick="readmore()" id="readMoreButton">Läs mer</button>
+        </section>
+        <article class="head">
+            <h3>Tidigare Arbeten</h3>
+            <div class="gridParent">
+                <article class="gridChild">
+                    <img src="goldenShower.jpg" alt="en guldig dusch">
+                </article>
+                <article class="gridChild">
+                    <img src="house.jpg" alt="ett hus">
+                </article>
+                <article class="gridChild">
+                    <img src="bathroom.jpg" alt="ett badrum">
+                </article>
+                <article class="gridChild">
+                    <img src="bathroom2.JPG" alt="ett badrum">
+                </article>
+            </div>
+            
+        </article>
+    </section>
+<footer id="footer">    
+    <form id="contactForm">
+        <h1>Har du funderingar? Kontakta oss!</h1>
+        <input type="text" id="namn" name="namn" placeholder="Ditt namn*" required>
+        <input type="text" id="email" name="email" placeholder="E-post*" required>
+        <input type="text" id="phone" name="phone number" placeholder="Telefonnummer">
+        <input type="text" id="meddelande" name="meddelande" placeholder="Ditt meddelande*" required>
+        <button type="button" onclick="buttonSubmit(event)"> Skicka! </button> 
+
+
+    </form>
+    <div class="socialMedia">
+        <h2>Våra sociala medier</h2>
+        <a href="https://www.instagram.com/" target="blank_">
+            <img src="instagram.png" alt="instagram ikon" class="instagram">
+        </a>
+        <a href="https://www.facebook.com" target="blank_">
+            <img src="facebook.png" alt="facebook ikon" class="facebook">
+        </a>
+        <a href="https://www.x.com" target="blank_">
+            <img src="x.png" alt="twitter/x ikon" class="X">
+        </a>
+    </div>
+</footer>
+
+<script src="hamburgerMenu.js"></script>
+
+<script src="readMore.js"></script> 
+
+<script src="buttonSubmit.js"></script>
+</body>
+</html>

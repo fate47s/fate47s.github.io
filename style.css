@@ -1,0 +1,523 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box; /*baserar elementens width och höjd utifrån respektive tal*/
+}
+html
+{
+    scroll-behavior: smooth; /*gör scrolling mer rent*/
+}
+
+body 
+{
+    width: 100%;
+}
+header
+{
+    width: 100%;
+    background-color: #570000;
+    position: fixed; /*gör att menyn fortsätter med hela sidan*/
+    z-index: 1000; /*gör att denna sätts ovanpå alla andra element och boxes*/
+}
+li
+{
+    list-style: none;
+}
+a
+{
+    color: white;
+    text-decoration: none;
+}
+nav
+{
+    width: 100%;
+}
+nav img.logo
+{
+    min-height: 70px;
+    height: 10vh;
+}
+nav.navBar
+{
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+ul.navMenu
+{
+    display: flex;
+    justify-content: space-between; /*lika stort mellanrum mellan elementen*/
+    align-items: center;
+    gap: 6px;
+    position: fixed;
+    transition: 0.5s ease;
+    text-align: center;
+    width: 100%;
+    left: -100%;
+    top: 70px;
+    flex-direction: column; /* gör att de olika delarna i menyn sätts ovanpå varandra*/
+    background-color:#570000;
+    
+}
+.navLink
+{
+    transition: 0.5s ease;
+}
+.navLink:hover
+{
+    color: cyan;
+}
+div.hamburger
+{
+    display: block;
+    cursor: pointer;
+    position: fixed;
+    left: 110px;
+}
+span.bar
+{
+    display: block; /*sätter långa rutorna ovanpå varandra*/
+    width: 30px;
+    height: 5px;
+    margin: 6px auto;
+    background-color: white;
+    transition: 0.4s;
+    
+}
+.hamburger.active .bar:nth-child(2)
+{
+    opacity: 0; /*gör att mellersta rutan försvinner*/
+}
+.hamburger.active .bar:nth-child(1)
+{
+    transform: translateY(10.5px) rotate(45deg);/* ändrar förhållandet av en av rutorna till formen av ett x*/
+}
+.hamburger.active .bar:nth-child(3)
+{
+    transform: translateY(-10.5px) rotate(-45deg); /*samma här*/
+}
+.navItem
+{
+    margin: 16px 0; /* sätter margin mellan varje item, alltså varje text/del av menyn*/
+}
+ul.navMenu.active
+{
+    left: 0;
+    top: 90px; /*ändrar förhållandet av menyn när den är aktiverad*/
+}
+
+.OffertImgButton
+{
+    width: 22.5vw;  
+    height: 10vh;
+    border: solid 5px white;
+    background-color: #570000;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center; /* sätter knappen i mitten av bilden*/
+    align-items: center;
+}
+#tidigareArbeten
+{
+    color: white;
+}
+div.backgroundimg
+{
+    width: 100%;
+    height:100vh;
+    background-image: url(carpenter.jpg);
+    display: flex;
+    flex-direction: column; /*hjälper centrera knappen i mitten*/
+    align-items: center;
+    text-align: center;
+    color: white;
+    justify-content: center;
+}
+a
+{
+    color: white;
+    text-decoration: none;
+}
+
+
+div.workersParent
+{
+    display: flex;
+    margin: 60px;
+    justify-content: center;   
+    
+}
+article.workersChild
+{
+    border: 2px solid black;
+    width: 30%;
+    justify-items: center; /*centrerar det som ska stå i rutorna.*/
+    font-size: 1rem;
+    margin: 0 8px;
+    height: 40vh;
+    min-height: min-content;
+}
+article.workersChild img
+{
+    padding-top: 5px;
+    width: 100px;
+    border-radius: 50%;/*gör bilderna runda*/
+}
+article.workersChild h2
+{
+    font-size: 1rem;
+}
+article.workersChild h3
+{
+    font-size: 0.9rem;
+    /*lägger till mellanrum mellan namnet och beskrivningen i rutorna*/
+}
+article.workersChild p
+{
+    font-size: 0.9rem;
+    padding: 5px;/*separerar beskrivnings texten från rutans sidor.*/
+}
+section.wrapperParent
+{
+    display: flex;
+    color: white;
+    font-size: 2.5rem;
+    height: min-content; /*sätter höjden till minst lika stor som innehållet, bra för responsitivitet*/
+    background-color: #570000;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+    
+}
+article.companyText
+{
+    width: 50vw;  /*sätter höjden automatiskt utifrån hur lång texten blir*/
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+
+    
+}
+
+#readMoreButton
+{
+    width: 25%;
+    font-size: 1.5rem;
+    justify-content: center;
+    background-color: #570000;
+    
+}
+#moreText
+{
+    display: none;
+}
+
+div.sectionWrap
+{
+    display: flex;
+    flex-direction: column; /*får läs mer knappen att hamna under texten*/
+    
+}
+article.companyText p
+{
+    font-size: 2rem; /*bestämmer storlek på bokstäverna i rutan*/
+    padding-right: 5px; /*stoppar texten från att nödda kanterna av bilderna*/
+}
+article.head
+{
+    width: min-content;
+    
+}
+.gridParent
+{
+    display: grid;
+    width: 45vw;
+    min-height: min-content; /*ser till att bilderna inte överflöder deras förälder*/
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 200px);
+    gap: 1rem;
+}
+
+.gridChild img
+{
+    width: 22.5vw;/*sätter storleken på varje bild på width*/
+    height: 100%;
+}
+.gridChild:nth-child(1)
+{
+grid-column: 1;
+grid-row: 1/3;
+}
+.gridChild:nth-child(2)
+{
+    grid-column: 2;
+    grid-row: 3/4;
+}
+.gridChild:nth-child(3)
+{
+    grid-column: 2;
+    grid-row: 1/3;
+}
+footer
+{
+    padding: 20px;
+    width: 100%;
+    display: flex;
+}
+footer h1
+{
+    font-size: 2.5rem;
+    margin: 10px;
+}
+form
+{
+    width: 50vw;
+}
+
+footer form input
+{
+    display: flex; /*sätter alla input rutor ovanpå varandra.*/
+    border: 2px black solid; /*lägger till en utkant på alla input rutor som är tydligare*/
+    width: 45vw;
+    height: 50px;
+    margin: 10px;
+    padding: 10px;
+    
+    
+}
+#meddelande
+{
+    height: 150px; /*expanderar den sista rutan till lite större*/
+    align-items: flex-start;
+}
+button
+{
+    width: 45vw;
+    color: white;
+    height: 100px;
+    margin: 10px;
+    padding: 10px;
+    background-color: #570000;
+    border: none;
+
+}
+div.socialMedia
+{
+    width: 50vw;
+    font-size: 1.5rem;
+    text-align: center;
+    overflow: hidden;
+
+}
+
+div.socialMedia img
+{
+    max-width: 240px;
+    width: 30%;
+    
+}
+
+
+
+/*SURFPLATTA, STYLING BÖRJAR HÄR*/
+
+@media (min-width: 426px) and (max-width: 1024px) 
+{
+
+div.backgroundimg
+{
+    background-position: 50%; /*centrerar bilden mer*/
+    background-position-y: 40%;
+    min-width: 100%;
+    height: 500px;
+}
+div.backgroundimg h1
+{
+    font-size: 1.5rem;
+}
+ul.navMenu.active
+{
+    top: 85px;
+}
+div.workersParent
+{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    flex-wrap: wrap; /*låter rutorna överflöda till nästa rad när de inte får plats*/ 
+}
+article.workersChild
+{
+    width: 35vw;
+    border: 2px solid black;
+    justify-items: center; /*centrerar det som ska stå i rutorna.*/
+    font-size: 0.5rem;
+    margin: 20px;
+}
+section.wrapperParent
+{
+    width: 100%;
+    height: min-content;
+    padding: 10px;
+    flex-wrap: wrap; /*låter rutorna fylla över när dom inte får plats på raden ovanför.*/
+}
+article.companyText
+{
+    width: 100%;
+    height: min-content;
+}
+.companyText h3
+{
+    font-size: 4rem;
+    width: 90%;
+}
+.companyText p
+{
+    width: 99%;
+    font-size: 2rem;
+}
+article.head
+{
+    width: 100%;
+    padding: 0;
+    margin-top: 10%;
+}
+.gridParent 
+{
+    height: min-content;
+}
+
+article.gridChild img
+{
+    width: 46vw; /* +1 vw annars täcker den inte hela article.head ^^*/
+}
+footer
+{
+    width: 100%;
+    display: block;
+    padding: 0;
+}
+form
+{
+    width: 100%;
+}
+form h1
+{
+    font-size: 2.6rem;
+}
+footer form input
+{
+    width: 95%; 
+    margin: 10px;
+}
+button
+{
+    width: 95%; /*vid width 100% kommer den överflöda och skapa vit utrymme på höger sida, vilket gör att responsiviteten blir dålig*/
+    margin: 10px;
+}
+div.socialMedia
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+div.socialMedia h2
+{
+    font-size: 3rem;
+}
+
+}
+
+
+
+/*MOBIL, STYLING BÖRJAR HÄR*/
+
+@media (max-width: 425px){
+div.OffertImgButton
+{
+    width: 40vw;
+    height: 70px;
+}
+div.OffertImgButton h1
+{
+    font-size: 0.8rem;
+}
+div.backgroundimg
+{
+    background-size: cover;
+}
+div.workersParent
+{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px;
+}
+article.workersChild
+{
+    width: 120vw;
+    
+    margin-bottom: 25px;
+    
+}
+section.wrapperParent
+{
+    display: block;
+}
+article.companyText p 
+{
+    font-size: 1.5rem;
+}
+#readMoreButton
+{
+    width: 200px;
+    text-align: left;
+}
+
+.wrapperParent h3
+{
+    font-size: 2rem;
+}
+.gridChild img
+{
+    width: 100%;
+}
+footer
+{
+    display: block;
+}
+
+form h1 
+{
+    font-size: 1rem;
+}
+ul.navMenu:active
+{
+    max-width: 425px;
+}
+div.socialMedia
+{
+    width: 100%; /* widthen måste ändras på alla element då den ärver den från pc versionen där de mesta är bredvid varann, och därför är de width: 50%;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.socialMedia h2
+{
+    font-size: 2rem;
+}
+article.companyText, article.head, div.gridParent, form, footer form input, button, .backgroundimg, .wrapperParent
+{
+    width: 100%; /*de mesta element hade width 50% på data versionen, och nu behövde jag se till att de täckte hela skärmen.*/
+}
+}
+
+
+
+
