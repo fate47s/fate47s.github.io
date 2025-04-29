@@ -154,6 +154,7 @@ div.workersParent
 article.workersChild
 {
     border: 2px solid black;
+    text-align: center;
     width: 30%;
     justify-items: center; /*centrerar det som ska stå i rutorna.*/
     font-size: 1rem;
@@ -347,6 +348,7 @@ div.workersParent
 {
     display: flex;
     margin: 0;
+    text-align: center;
     padding: 0;
     justify-content: center;
     flex-wrap: wrap; /*låter rutorna överflöda till nästa rad när de inte får plats*/ 
@@ -457,12 +459,13 @@ div.workersParent
 {
     display: flex;
     flex-wrap: wrap;
+    text-align: center;
     margin: 30px;
 }
 article.workersChild
 {
     width: 120vw;
-    
+    text-align: center;
     margin-bottom: 25px;
     
 }
