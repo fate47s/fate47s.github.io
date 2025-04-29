@@ -148,6 +148,7 @@ div.workersParent
     display: flex;
     margin: 60px;
     justify-content: center;   
+    text-align: center;
     
 }
 article.workersChild
